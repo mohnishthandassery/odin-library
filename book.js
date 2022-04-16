@@ -1,14 +1,16 @@
 let myLibrary = [];
 const main = document.querySelector("div#grid");
 
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-  this.info = () => {
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
+  info() {
     return `${title} by ${author}, ${pages} pages, ${read}`;
-  };
+  }
 }
 
 function addBookToLibrary(title, author, pages, read) {
